@@ -10,6 +10,9 @@
 
 @interface ViewController ()
 
+@property (nonatomic, weak) IBOutlet UILabel *label;
+@property (nonatomic, weak) IBOutlet UITextField *textField;
+
 @end
 
 @implementation ViewController
@@ -22,6 +25,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(IBAction)changeTextButtonDidTap:(id)sender{
+    self.label.text = self.textField.text;
 }
 
 @end
